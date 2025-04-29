@@ -6,7 +6,8 @@ local local_plugins = {
         config = function()
         end,
     },
-    {
+--[[
+  {
         "cockpit",
         dir = "~/personal/cockpit",
         config = function()
@@ -15,7 +16,7 @@ local local_plugins = {
             vim.keymap.set("n", "<leader>cr", "<cmd>CockpitRefresh<CR>")
         end,
     },
-
+]]--
     {
         "streamer",
         dir = "~/personal/eleven-streamer",
