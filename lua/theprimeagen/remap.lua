@@ -71,10 +71,32 @@ vim.keymap.set(
     "oif err != nil {<CR>}<Esc>O.logger.Error(\"error\", \"error\", err)<Esc>F.;i"
 )
 
-vim.keymap.set("n", "<leader>ca", function()
+vim.keymap.set("n", "<leader>mir", function()
     require("cellular-automaton").start_animation("make_it_rain")
+end)
+
+vim.keymap.set("n", "<leader>gol", function()
+    require("cellular-automaton").start_animation("game_of_life")
 end)
 
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+local opts = { noremap = true, silent = true }
+
+-- Existing mappings (e.g., window management)
+
+vim.keymap.set("n", "<leader>ws", ":split<CR>", vim.tbl_extend("force", opts, { desc = "Split window horizontally" }))
+vim.keymap.set("n", "<leader>wv", ":vsplit<CR>", vim.tbl_extend("force", opts, { desc = "Split window vertically" }))vim.keymap.set("n", "<leader>a", function() require("harpoon"):list():add() end, vim.tbl_extend("force", opts, { desc = "Add file to Harpoon" }))
+
+vim.keymap.set("n", "<leader>A", function() require("harpoon"):list():prepend() end, vim.tbl_extend("force", opts, { desc = "Prepend file to Harpoon" }))
+vim.keymap.set("n", "<C-e>", function() require("harpoon").ui:toggle_quick_menu(require("harpoon"):list()) end, vim.tbl_extend("force", opts, { desc = "Toggle Harpoon menu" }))
+vim.keymap.set("n", "<leader>1", function() require("harpoon"):list():select(1) end, vim.tbl_extend("force", opts, { desc = "Select Harpoon file 1" }))
+vim.keymap.set("n", "<leader>2", function() require("harpoon"):list():select(2) end, vim.tbl_extend("force", opts, { desc = "Select Harpoon file 2" }))
+vim.keymap.set("n", "<leader>3", function() require("harpoon"):list():select(3) end, vim.tbl_extend("force", opts, { desc = "Select Harpoon file 3" }))
+vim.keymap.set("n", "<leader>4", function() require("harpoon"):list():select(4) end, vim.tbl_extend("force", opts, { desc = "Select Harpoon file 4" }))
+vim.keymap.set("n", "<leader><leader>1", function() require("harpoon"):list():replace_at(1) end, vim.tbl_extend("force", opts, { desc = "Replace Harpoon file 1" }))
+vim.keymap.set("n", "<leader><leader>2", function() require("harpoon"):list():replace_at(2) end, vim.tbl_extend("force", opts, { desc = "Replace Harpoon file 2" }))
+vim.keymap.set("n", "<leader><leader>3", function() require("harpoon"):list():replace_at(3) end, vim.tbl_extend("force", opts, { desc = "Replace Harpoon file 3" }))
+vim.keymap.set("n", "<leader><leader>4", function() require("harpoon"):list():replace_at(4) end, vim.tbl_extend("force", opts, { desc = "Replace Harpoon file 4" }))

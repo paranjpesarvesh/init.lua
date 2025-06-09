@@ -1,10 +1,24 @@
 return {
-
-    {
-        "nvim-lua/plenary.nvim",
-        name = "plenary"
-    },
-
-    "eandrju/cellular-automaton.nvim",
+  { "nvim-lua/plenary.nvim", name = "plenary" },
+  "eandrju/cellular-automaton.nvim",
+  { import = "theprimeagen.lazy.fugitive" },
+  { import = "theprimeagen.lazy.jai" },
+  { import = "theprimeagen.lazy.local" },
+  { import = "theprimeagen.lazy.lsp" },
+  { import = "theprimeagen.lazy.neotest" },
+  { import = "theprimeagen.lazy.peek" },
+  { import = "theprimeagen.lazy.snippets" },
+  { import = "theprimeagen.lazy.telescope" },
+  { import = "theprimeagen.lazy.tj" },
+  { import = "theprimeagen.lazy.treesitter" },
+  { import = "theprimeagen.lazy.trouble" },
+  { import = "theprimeagen.lazy.undotree" },
+  { import = "theprimeagen.lazy.vimbegood" },
+  { import = "theprimeagen.lazy.zenmode" },
+  { import = "theprimeagen.lazy.nvim-tree" },
+  { import = "theprimeagen.lazy.cloak" },
+  { import = "theprimeagen.lazy.colors" },
+  { import = "theprimeagen.lazy.conform" },
+  { import = "theprimeagen.lazy.dap" },
+  { import = "theprimeagen.lazy.harpoon" }
 }
-
