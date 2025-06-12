@@ -20,5 +20,6 @@ return {
   { import = "theprimeagen.lazy.colors" },
   { import = "theprimeagen.lazy.conform" },
   { import = "theprimeagen.lazy.dap" },
-  { import = "theprimeagen.lazy.harpoon" }
+  { import = "theprimeagen.lazy.harpoon" },
+  { import = "theprimeagen.lazy.lazygit" },
 }
