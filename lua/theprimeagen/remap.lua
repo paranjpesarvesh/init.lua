@@ -85,11 +85,13 @@ end)
 
 local opts = { noremap = true, silent = true }
 
--- Existing mappings (e.g., window management)
+-- Window Management
 
 vim.keymap.set("n", "<leader>ws", ":split<CR>", vim.tbl_extend("force", opts, { desc = "Split window horizontally" }))
 vim.keymap.set("n", "<leader>wv", ":vsplit<CR>", vim.tbl_extend("force", opts, { desc = "Split window vertically" }))vim.keymap.set("n", "<leader>a", function() require("harpoon"):list():add() end, vim.tbl_extend("force", opts, { desc = "Add file to Harpoon" }))
 
+
+-- Harpoon
 vim.keymap.set("n", "<leader>A", function() require("harpoon"):list():prepend() end, vim.tbl_extend("force", opts, { desc = "Prepend file to Harpoon" }))
 vim.keymap.set("n", "<C-e>", function() require("harpoon").ui:toggle_quick_menu(require("harpoon"):list()) end, vim.tbl_extend("force", opts, { desc = "Toggle Harpoon menu" }))
 vim.keymap.set("n", "<leader>1", function() require("harpoon"):list():select(1) end, vim.tbl_extend("force", opts, { desc = "Select Harpoon file 1" }))
@@ -100,3 +102,7 @@ vim.keymap.set("n", "<leader><leader>1", function() require("harpoon"):list():re
 vim.keymap.set("n", "<leader><leader>2", function() require("harpoon"):list():replace_at(2) end, vim.tbl_extend("force", opts, { desc = "Replace Harpoon file 2" }))
 vim.keymap.set("n", "<leader><leader>3", function() require("harpoon"):list():replace_at(3) end, vim.tbl_extend("force", opts, { desc = "Replace Harpoon file 3" }))
 vim.keymap.set("n", "<leader><leader>4", function() require("harpoon"):list():replace_at(4) end, vim.tbl_extend("force", opts, { desc = "Replace Harpoon file 4" }))
+
+
+-- lazygit
+vim.keymap.set("n", "<leader>lg", "<cmd>LazyGit<CR>", vim.tbl_extend("force", opts, { desc = "Open LazyGit" }))
