@@ -106,3 +106,35 @@ vim.keymap.set("n", "<leader><leader>4", function() require("harpoon"):list():re
 
 -- lazygit
 vim.keymap.set("n", "<leader>lg", "<cmd>LazyGit<CR>", vim.tbl_extend("force", opts, { desc = "Open LazyGit" }))
+
+-- Run Terminal Command
+vim.keymap.set("n", "<leader>t", function()
+    local cmd = vim.fn.getcwd()
+    vim.cmd("belowright split | terminal bash -i")
+    vim.fn.timer_start(50, function()
+        vim.cmd("startinsert")
+    end)
+    vim.notify("Running " .. cmd, vim.log.levels.INFO)
+end, vim.tbl_extend("force", opts, { desc = "Run custom terminal command" }))
+
+-- Toggle Terminal and File Buffer
+vim.keymap.set("n", "<C-/>", function()
+    local current_win = vim.api.nvim_get_current_win()
+    local wins = vim.api.nvim_list_wins()
+    for _, win in ipairs(wins) do
+        local buf = vim.api.nvim_win_get_buf(win)
+        if vim.bo[buf].buftype == "terminal" and win ~= current_win then
+            vim.api.nvim_set_current_win(win)
+            vim.cmd("startinsert")
+            return
+        end
+    end
+    for _, win in ipairs(wins) do
+        local buf = vim.api.nvim_win_get_buf(win)
+        if vim.bo[buf].buftype ~= "terminal" and win ~= current_win then
+            vim.api.nvim_set_current_win(win)
+            return
+        end
+    end
+    vim.notify("No terminal or file buffer found", vim.log.levels.WARN)
+end, vim.tbl_extend("force", opts, { desc = "Toggle between terminal and file buffer" }))
