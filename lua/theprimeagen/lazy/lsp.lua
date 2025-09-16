@@ -11,11 +11,10 @@ return {
       require("mason").setup()
 
       -- Setup mason-lspconfig.nvim
-      require("mason-lspconfig").setup({
+      require("mason-lspconfig").setup {
         ensure_installed = { "lua_ls", "rust_analyzer", "gopls", "zls" }, -- Servers to install
         automatic_installation = true, -- Auto-install servers
-        automatic_enabled = false,
-      })
+      }
 
       -- Setup fidget.nvim (progress UI)
       require("fidget").setup()

@@ -22,4 +22,5 @@ return {
   { import = "theprimeagen.lazy.dap" },
   { import = "theprimeagen.lazy.harpoon" },
   { import = "theprimeagen.lazy.lazygit" },
+  { import = "theprimeagen.lazy.vimtex" },
 }

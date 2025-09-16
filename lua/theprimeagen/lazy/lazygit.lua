@@ -1,10 +1,19 @@
 return {
-    {
-        "kdheepak/lazygit.nvim",
-        dependencies = { "nvim-lua/plenary.nvim" },
-        config = function()
-            vim.g.lazygit_floating_window_scaling_factor = 0.9
-            vim.g.lazygit_floating_window_winblend = 0
-        end,
+    "kdheepak/lazygit.nvim",
+    lazy = false,
+    cmd = {
+        "LazyGit",
+        "LazyGitConfig",
+        "LazyGitCurrentFile",
+        "LazyGitFilter",
+        "LazyGitFilterCurrentFile",
     },
+    -- optional for floating window border decoration
+    dependencies = {
+        "nvim-telescope/telescope.nvim",
+        "nvim-lua/plenary.nvim",
+    },
+    config = function()
+        require("telescope").load_extension("lazygit")
+    end,
 }

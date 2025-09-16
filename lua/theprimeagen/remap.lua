@@ -21,6 +21,12 @@ vim.keymap.set("n", "<leader>svwm", function()
     require("vim-with-me").StopVimWithMe()
 end)
 
+-- git pickers
+vim.keymap.set("n", "<leader>gf", "<cmd>lua require('telescope.builtin').git_files()<CR>", opts)
+vim.keymap.set("n", "<leader>gc", "<cmd>lua require('telescope.builtin').git_commits()<CR>", opts)
+vim.keymap.set("n", "<leader>gb", "<cmd>lua require('telescope.builtin').git_branches()<CR>", opts)
+vim.keymap.set("n", "<leader>gs", "<cmd>lua require('telescope.builtin').git_status()<CR>", opts)
+
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
@@ -118,7 +124,7 @@ vim.keymap.set("n", "<leader>t", function()
 end, vim.tbl_extend("force", opts, { desc = "Run custom terminal command" }))
 
 -- Toggle Terminal and File Buffer
-vim.keymap.set("n", "<C-/>", function()
+vim.keymap.set("n", "<C-\\>", function()
     local current_win = vim.api.nvim_get_current_win()
     local wins = vim.api.nvim_list_wins()
     for _, win in ipairs(wins) do
@@ -138,3 +144,14 @@ vim.keymap.set("n", "<C-/>", function()
     end
     vim.notify("No terminal or file buffer found", vim.log.levels.WARN)
 end, vim.tbl_extend("force", opts, { desc = "Toggle between terminal and file buffer" }))
+
+-- Evince support for pdf
+vim.keymap.set("n", "<leader>pdf", function()
+  local file = vim.fn.expand("%:p") -- full path
+  if file:match("%.pdf$") then
+    vim.fn.jobstart({ "evince", file }, { detach = true }) -- run in background
+  else
+    print("Not a PDF file: " .. file)
+  end
+end, { desc = "Open PDF with evince" })
+
