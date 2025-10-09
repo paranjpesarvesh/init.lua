@@ -1,0 +1,212 @@
+
+===== Normal Mode =====
+n  <Space>tt   * <Lua 258: ~/.config/nvim/lua/theprimeagen/lazy/trouble.lua:9>
+n  <Space>lt   * :VimtexTocOpen<CR>
+n  <Space>lv   * :VimtexView<CR>
+n  <Space>lc   * :VimtexCompile<CR>
+n  <Space>u    * <Lua 190: vim/_editor.lua:0>
+n  <Space>nt   * <Lua 174: ~/.config/nvim/lua/theprimeagen/lazy/nvim-tree.lua:43>
+                 Toggle NvimTree focus
+n  <Space>nq   * <Lua 173: ~/.local/share/nvim/lazy/nvim-tree.lua/lua/nvim-tree/api.lua:51>
+                 Close NvimTree
+n  <Space>nf   * <Lua 17: ~/.local/share/nvim/lazy/nvim-tree.lua/lua/nvim-tree/api.lua:51>
+                 Focus NvimTree
+n  <Space>zZ   * <Lua 193: ~/.config/nvim/lua/theprimeagen/lazy/zenmode.lua:20>
+n  <Space>zz   * <Lua 192: ~/.config/nvim/lua/theprimeagen/lazy/zenmode.lua:5>
+n  <Space>vh   * <Lua 136: ~/.local/share/nvim/lazy/telescope.nvim/lua/telescope/builtin/init.lua:500>
+n  <Space>ps   * <Lua 135: ~/.config/nvim/lua/theprimeagen/lazy/telescope.lua:24>
+n  <Space>pWs  * <Lua 134: ~/.config/nvim/lua/theprimeagen/lazy/telescope.lua:20>
+n  <Space>pws  * <Lua 122: ~/.config/nvim/lua/theprimeagen/lazy/telescope.lua:16>
+n  <Space>pf   * <Lua 175: ~/.config/nvim/lua/theprimeagen/lazy/nvim-tree.lua:50>
+                 Telescope find files in NvimTree dir
+n  <Space>ta   * <Lua 129: ~/.config/nvim/lua/theprimeagen/lazy/neotest.lua:50>
+                 Debug: Open test output
+n  <Space>to   * <Lua 128: ~/.config/nvim/lua/theprimeagen/lazy/neotest.lua:46>
+                 Debug: Open test output
+n  <Space>td   * <Lua 127: ~/.config/nvim/lua/theprimeagen/lazy/neotest.lua:38>
+                 Debug: Debug Nearest Test
+n  <Space>ts   * <Lua 126: ~/.config/nvim/lua/theprimeagen/lazy/neotest.lua:31>
+                 Debug: Running Test Suite
+n  <Space>tv   * <Lua 125: ~/.config/nvim/lua/theprimeagen/lazy/neotest.lua:27>
+                 Debug: Summary Toggle
+n  <Space>tr   * <Lua 123: ~/.config/nvim/lua/theprimeagen/lazy/neotest.lua:20>
+                 Debug: Running Nearest Test
+n  <Space>dc   * <Lua 106: ~/.config/nvim/lua/theprimeagen/lazy/dap.lua:110>
+                 Debug: toggle console ui
+n  <Space>dS   * <Lua 105: ~/.config/nvim/lua/theprimeagen/lazy/dap.lua:108>
+                 Debug: toggle scopes ui
+n  <Space>db   * <Lua 104: ~/.config/nvim/lua/theprimeagen/lazy/dap.lua:106>
+                 Debug: toggle breakpoints ui
+n  <Space>dw   * <Lua 103: ~/.config/nvim/lua/theprimeagen/lazy/dap.lua:104>
+                 Debug: toggle watches ui
+n  <Space>ds   * <Lua 102: ~/.config/nvim/lua/theprimeagen/lazy/dap.lua:102>
+                 Debug: toggle stacks ui
+n  <Space>dr   * <Lua 101: ~/.config/nvim/lua/theprimeagen/lazy/dap.lua:101>
+                 Debug: toggle repl ui
+n  <Space>B    * <Lua 92: ~/.config/nvim/lua/theprimeagen/lazy/dap.lua:47>
+                 Debug: Set Conditional Breakpoint
+n  <Space>b    * <Lua 91: ~/.local/share/nvim/lazy/nvim-dap/lua/dap.lua:1008>
+                 Debug: Toggle Breakpoint
+n  <Space>pdf  * <Lua 40: ~/.config/nvim/lua/theprimeagen/remap.lua:149>
+                 Open PDF with evince
+n  <Space>t    * <Lua 38: ~/.config/nvim/lua/theprimeagen/remap.lua:117>
+                 Run custom terminal command
+n  <Space>lg   * <Cmd>LazyGit<CR>
+                 Open LazyGit
+n  <Space><Space>4 * <Lua 37: ~/.config/nvim/lua/theprimeagen/remap.lua:110>
+                 Replace Harpoon file 4
+n  <Space><Space>3 * <Lua 36: ~/.config/nvim/lua/theprimeagen/remap.lua:109>
+                 Replace Harpoon file 3
+n  <Space><Space>2 * <Lua 35: ~/.config/nvim/lua/theprimeagen/remap.lua:108>
+                 Replace Harpoon file 2
+n  <Space><Space>1 * <Lua 34: ~/.config/nvim/lua/theprimeagen/remap.lua:107>
+                 Replace Harpoon file 1
+n  <Space>4    * <Lua 33: ~/.config/nvim/lua/theprimeagen/remap.lua:106>
+                 Select Harpoon file 4
+n  <Space>3    * <Lua 32: ~/.config/nvim/lua/theprimeagen/remap.lua:105>
+                 Select Harpoon file 3
+n  <Space>2    * <Lua 31: ~/.config/nvim/lua/theprimeagen/remap.lua:104>
+                 Select Harpoon file 2
+n  <Space>1    * <Lua 30: ~/.config/nvim/lua/theprimeagen/remap.lua:103>
+                 Select Harpoon file 1
+n  <Space>A    * <Lua 28: ~/.config/nvim/lua/theprimeagen/remap.lua:101>
+                 Prepend file to Harpoon
+n  <Space>a    * <Lua 27: ~/.config/nvim/lua/theprimeagen/remap.lua:97>
+                 Add file to Harpoon
+n  <Space>wv   * :vsplit<CR>
+                 Split window vertically
+n  <Space>ws   * :split<CR>
+                 Split window horizontally
+n  <Space><Space> * <Lua 26: ~/.config/nvim/lua/theprimeagen/remap.lua:88>
+n  <Space>gol  * <Lua 25: ~/.config/nvim/lua/theprimeagen/remap.lua:84>
+n  <Space>mir  * <Lua 24: ~/.config/nvim/lua/theprimeagen/remap.lua:80>
+n  <Space>el   * oif err != nil {<CR>}<Esc>O.logger.Error("error", "error", err)<Esc>F.;i
+n  <Space>ef   * oif err != nil {<CR>}<Esc>Olog.Fatalf("error: %s\n", err.Error())<Esc>jj
+n  <Space>ea   * oassert.NoError(err, "")<Esc>F";a
+n  <Space>ee   * oif err != nil {<CR>}<Esc>Oreturn err<Esc>
+n  <Space>x    * <Cmd>!chmod +x %<CR>
+n  <Space>s    * :%s/\<<C-R><C-W>\>/<C-R><C-W>/gI<Left><Left><Left>
+n  <Space>j    * <Cmd>lprev<CR>zz
+n  <Space>k    * <Cmd>lnext<CR>zz
+n  <Space>f    * <Lua 23: ~/.config/nvim/lua/theprimeagen/remap.lua:44>
+n  <Space>d    * "_d
+n  <Space>Y    * "+Y
+n  <Space>y    * "+y
+n  <Space>gs   * <Lua 271: vim/_editor.lua:0>
+n  <Space>gb   * <Cmd>lua require('telescope.builtin').git_branches()<CR>
+n  <Space>gc   * <Cmd>lua require('telescope.builtin').git_commits()<CR>
+n  <Space>gf   * <Cmd>lua require('telescope.builtin').git_files()<CR>
+n  <Space>svwm * <Lua 22: ~/.config/nvim/lua/theprimeagen/remap.lua:20>
+n  <Space>vwm  * <Lua 21: ~/.config/nvim/lua/theprimeagen/remap.lua:17>
+n  <Space>zig  * <Cmd>LspRestart<CR>
+n  <Space>tf     <Plug>PlenaryTestFile
+n  <Space>pv   * <Lua 131: ~/.local/share/nvim/lazy/nvim-tree.lua/lua/nvim-tree/api.lua:51>
+                 Toggle NvimTree
+n  %             <Plug>(MatchitNormalForward)
+n  &           * :&&<CR>
+                 :help &-default
+n  =ap         * ma=ap'a
+n  J           * mzJ`z
+n  N           * Nzzzv
+n  Q           * <Nop>
+n  Y           * y$
+                 :help Y-default
+n  [%            <Plug>(MatchitNormalMultiBackward)
+n  [t          * <Lua 259: ~/.config/nvim/lua/theprimeagen/lazy/trouble.lua:13>
+n  [d          * <Lua 15: vim/_defaults.lua:0>
+                 Jump to the previous diagnostic
+n  ]%            <Plug>(MatchitNormalMultiForward)
+n  ]t          * <Lua 261: ~/.config/nvim/lua/theprimeagen/lazy/trouble.lua:17>
+n  ]d          * <Lua 14: vim/_defaults.lua:0>
+                 Jump to the next diagnostic
+n  g%            <Plug>(MatchitNormalBackward)
+n  gh          * <Cmd>diffget //3<CR>
+n  gu          * <Cmd>diffget //2<CR>
+n  gcc         * <Lua 12: vim/_defaults.lua:0>
+                 Toggle comment line
+n  gc          * <Lua 10: vim/_defaults.lua:0>
+                 Toggle comment
+n  gx          * <Lua 8: vim/_defaults.lua:0>
+                 Opens filepath or URI under cursor with the system handler (file explorer, web browser, …)
+n  n           * nzzzv
+n  y<C-G>      & :<C-U>call setreg(v:register, fugitive#Object(@%))<CR>
+n  <Plug>(MatchitNormalMultiForward) * :<C-U>call matchit#MultiMatch("W",  "n")<CR>
+n  <Plug>(MatchitNormalMultiBackward) * :<C-U>call matchit#MultiMatch("bW", "n")<CR>
+n  <Plug>(MatchitNormalBackward) * :<C-U>call matchit#Match_wrapper('',0,'n')<CR>
+n  <Plug>(MatchitNormalForward) * :<C-U>call matchit#Match_wrapper('',1,'n')<CR>   <Plug>luasnip-expand-repeat * <Lua 296: ~/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:35>
+                 LuaSnip: Repeat last node expansion
+n  <Plug>luasnip-delete-check * <Lua 294: ~/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:28>
+                 LuaSnip: Removes current snippet from jumplist
+n  <Plug>fugitive: & <Nop>
+n  <Plug>fugitive:y<C-G> & :<C-U>call setreg(v:register, fugitive#Object(@%))<CR>
+n  <C-P>       * <Lua 120: ~/.local/share/nvim/lazy/telescope.nvim/lua/telescope/builtin/init.lua:500>
+n  <Plug>PlenaryTestFile * :lua require('plenary.test_harness').test_file(vim.fn.expand("%:p"))<CR>
+n  <F12>       * <Lua 90: ~/.local/share/nvim/lazy/nvim-dap/lua/dap.lua:745>
+                 Debug: Step Out
+n  <F11>       * <Lua 89: ~/.local/share/nvim/lazy/nvim-dap/lua/dap.lua:706>
+                 Debug: Step Into
+n  <F10>       * <Lua 88: ~/.local/share/nvim/lazy/nvim-dap/lua/dap.lua:673>
+                 Debug: Step Over
+n  <F8>        * <Lua 86: ~/.local/share/nvim/lazy/nvim-dap/lua/dap.lua:1117>
+                 Debug: Continue
+n  <C-Bslash>  * <Lua 39: ~/.config/nvim/lua/theprimeagen/remap.lua:127>
+                 Toggle between terminal and file buffer
+n  <C-E>       * <Lua 29: ~/.config/nvim/lua/theprimeagen/remap.lua:102>
+                 Toggle Harpoon menu
+n  <C-J>       * <Cmd>cprev<CR>zz
+n  <C-K>       * <Cmd>cnext<CR>zz
+n  <C-F>       * <Cmd>silent !tmux neww tmux-sessionizer<CR>
+n  <C-U>       * <C-U>zz
+n  <C-D>       * <C-D>zz
+n  <C-W><C-D>    <C-W>d
+                 Show diagnostics under the cursor
+n  <C-W>d      * <Lua 16: vim/_defaults.lua:0>
+                 Show diagnostics under the cursor
+n  <C-L>       * <Cmd>nohlsearch|diffupdate|normal! <C-L><CR>
+                 :help CTRL-L-default
+v  <Space>d    * "_d
+v  <Space>y    * "+y
+x  <Space>p    * "_dP
+x  #           * <Lua 7: vim/_defaults.lua:0>
+                 :help v_#-default
+x  %             <Plug>(MatchitVisualForward)
+x  *           * <Lua 3: vim/_defaults.lua:0>
+                 :help v_star-default
+x  @           * mode() == 'V' ? ':normal! @'.getcharstr().'<CR>' : '@'
+                 :help v_@-default
+v  J           * :m '>+1<CR>gv=gv
+v  K           * :m '<-2<CR>gv=gv
+x  Q           * mode() == 'V' ? ':normal! @<C-R>=reg_recorded()<CR><CR>' : 'Q'
+                 :help v_Q-default
+x  [%            <Plug>(MatchitVisualMultiBackward)
+x  ]%            <Plug>(MatchitVisualMultiForward)
+x  a%            <Plug>(MatchitVisualTextObject)
+x  g%            <Plug>(MatchitVisualBackward)
+x  gc          * <Lua 11: vim/_defaults.lua:0>
+                 Toggle comment
+x  gx          * <Lua 9: vim/_defaults.lua:0>
+                 Opens filepath or URI under cursor with the system handler (file explorer, web browser, …)
+x  <Plug>(MatchitVisualTextObject)   <Plug>(MatchitVisualMultiBackward)o<Plug>(MatchitVisualMultiForward)
+x  <Plug>(MatchitVisualMultiForward) * :<C-U>call matchit#MultiMatch("W",  "n")<CR>m'gv``
+x  <Plug>(MatchitVisualMultiBackward) * :<C-U>call matchit#MultiMatch("bW", "n")<CR>m'gv``
+x  <Plug>(MatchitVisualBackward) * :<C-U>call matchit#Match_wrapper('',0,'v')<CR>m'gv``
+x  <Plug>(MatchitVisualForward) * :<C-U>call matchit#Match_wrapper('',1,'v')<CR>:if col("''") != col("$") | exe ":normal! m'" | endif<CR>gv``
+s  <C-E>       * <Lua 319: ~/.config/nvim/lua/theprimeagen/lazy/snippets.lua:22>s  <C-S>,      * <Lua 317: ~/.config/nvim/lua/theprimeagen/lazy/snippets.lua:20>s  <C-S>;      * <Lua 315: ~/.config/nvim/lua/theprimeagen/lazy/snippets.lua:19>s  <Plug>luasnip-jump-prev * <Lua 303: ~/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:57>
+                 LuaSnip: Jump to the previous node
+s  <Plug>luasnip-jump-next * <Lua 302: ~/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:54>
+                 LuaSnip: Jump to the next node
+s  <Plug>luasnip-prev-choice * <Lua 301: ~/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:51>
+                 LuaSnip: Change to the previous choice from the choiceNode
+s  <Plug>luasnip-next-choice * <Lua 300: ~/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:48>
+                 LuaSnip: Change to the next choice from the choiceNode
+s  <Plug>luasnip-expand-snippet * <Lua 299: ~/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:45>
+                 LuaSnip: Expand the current snippet
+s  <Plug>luasnip-expand-or-jump * <Lua 298: ~/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:42>
+                 LuaSnip: Expand or jump in the current snippet
+   <Plug>luasnip-expand-repeat * <Lua 296: ~/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:35>
+                 LuaSnip: Repeat last node expansion
+Error detected while processing command line:
+E173: 1 more file to edit
+Failed to run `config` for nvim-lspconfig
+
+...g.nvim/lua/mason-lspcon
