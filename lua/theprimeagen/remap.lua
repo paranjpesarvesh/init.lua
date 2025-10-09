@@ -116,12 +116,17 @@ vim.keymap.set("n", "<leader>lg", "<cmd>LazyGit<CR>", vim.tbl_extend("force", op
 -- Run Terminal Command
 vim.keymap.set("n", "<leader>t", function()
     local cmd = vim.fn.getcwd()
-    vim.cmd("belowright split | terminal bash -i")
+    local height = math.floor(vim.o.lines * 0.20)  -- 20% of total lines
+
+    vim.cmd("belowright " .. height .. "split | terminal bash -i")
+
     vim.fn.timer_start(50, function()
         vim.cmd("startinsert")
     end)
-    vim.notify("Running " .. cmd, vim.log.levels.INFO)
-end, vim.tbl_extend("force", opts, { desc = "Run custom terminal command" }))
+
+    vim.notify("Opened terminal in " .. cmd, vim.log.levels.INFO)
+end, vim.tbl_extend("force", opts, { desc = "Run terminal in bottom 20% window" }))
+
 
 -- Toggle Terminal and File Buffer
 vim.keymap.set("n", "<C-\\>", function()
@@ -144,6 +149,7 @@ vim.keymap.set("n", "<C-\\>", function()
     end
     vim.notify("No terminal or file buffer found", vim.log.levels.WARN)
 end, vim.tbl_extend("force", opts, { desc = "Toggle between terminal and file buffer" }))
+
 
 -- Evince support for pdf
 vim.keymap.set("n", "<leader>pdf", function()
