@@ -1,58 +1,67 @@
+-- ~/.config/nvim/lua/theprimeagen/lazy/lsp.lua
 return {
   {
-    "neovim/nvim-lspconfig",
+    "neovim/nvim-lspconfig",  -- Keep for :LspInfo, etc.
     dependencies = {
       "williamboman/mason.nvim",
-      "williamboman/mason-lspconfig.nvim",
+      { "mason-org/mason-lspconfig.nvim", version = ">=2.0.0" },
       "j-hui/fidget.nvim",
+      "hrsh7th/cmp-nvim-lsp",
     },
+
     config = function()
-      -- Setup mason.nvim
+      ----------------------------------------------------------------
+      -- 1. Mason: Install servers
+      ----------------------------------------------------------------
       require("mason").setup()
 
-      -- Setup mason-lspconfig.nvim
-      require("mason-lspconfig").setup {
-        ensure_installed = { "lua_ls", "rust_analyzer", "gopls", "zls" }, -- Servers to install
-        automatic_installation = true, -- Auto-install servers
+      ----------------------------------------------------------------
+      -- 2. mason-lspconfig: Auto-install + auto-enable
+      ----------------------------------------------------------------
+      local mason_lsp = require("mason-lspconfig")
+      mason_lsp.setup({
+        ensure_installed = { "lua_ls", "rust_analyzer", "gopls", "zls" },
+        automatic_installation = true,
+        automatic_enable = { "lua_ls", "rust_analyzer", "gopls", "zls" }, -- Enables them
+      })
+
+      ----------------------------------------------------------------
+      -- 3. Capabilities for nvim-cmp
+      ----------------------------------------------------------------
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+      ----------------------------------------------------------------
+      -- 4. Define LSP configs (NEW NATIVE WAY)
+      ----------------------------------------------------------------
+      -- lua_ls: special config
+      vim.lsp.config.lua_ls = {
+        settings = {
+          Lua = {
+            diagnostics = { globals = { "vim" } },
+            workspace = { checkThirdParty = false },
+            telemetry = { enable = false },
+          },
+        },
+        capabilities = capabilities,
+        on_attach = function(client, bufnr)
+          -- Optional: keymaps
+          local opts = { buffer = bufnr, noremap = true, silent = true }
+          vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+          vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+          vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+        end,
       }
 
-      -- Setup fidget.nvim (progress UI)
-      require("fidget").setup()
+      -- Other servers: minimal config
+      local default_cfg = { capabilities = capabilities }
+      for _, server in ipairs({ "rust_analyzer", "gopls", "zls" }) do
+        vim.lsp.config[server] = default_cfg
+      end
 
-      -- LSP keybindings
-      local opts = { noremap = true, silent = true }
-      vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-      vim.keymap.set("n", "<leader>vws", vim.lsp.buf.workspace_symbol, opts)
-      vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float, opts)
-      vim.keymap.set("n", "<leader>vca", vim.lsp.buf.code_action, opts)
-      vim.keymap.set("n", "<leader>vrr", vim.lsp.buf.references, opts)
-      vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename, opts)
-      vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
-      vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
-      vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
-      vim.keymap.set("n", "<leader>zig", function() vim.cmd("LspRestart") end, opts)
-
-      -- Setup LSP servers
-      local lspconfig = require("lspconfig")
-      require("mason-lspconfig").setup_handlers({
-        -- Default handler for all servers
-        function(server_name)
-          lspconfig[server_name].setup({})
-        end,
-        -- Custom handler for lua_ls
-        ["lua_ls"] = function()
-          lspconfig.lua_ls.setup({
-            settings = {
-              Lua = {
-                diagnostics = {
-                  globals = { "vim" }, -- Recognize vim global
-                },
-              },
-            },
-          })
-        end,
-      })
+      ----------------------------------------------------------------
+      -- 5. Fidget: LSP progress
+      ----------------------------------------------------------------
+      require("fidget").setup({})
     end,
   },
 }
