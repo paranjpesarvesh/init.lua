@@ -106,6 +106,32 @@
 | `<Space>zig`        | Restart LSP                          | `:LspRestart`                  |
 | `<Space>tf`         | Plenary test file                    | Lua                            |
 | `<Space>pv`         | Toggle NvimTree                      | Lua                            |
+| `<Space>lc`         | Compile LaTeX                        | `:VimtexCompile`               |
+| `<Space>svwm`       | Stop vim-with-me                     | Custom Lua                     |
+| `<Space>pws`        | Telescope search (lowercase)         | `telescope.lua`                |
+| `<Space>gs`         | Custom git command                   | `vim/_editor.lua`              |
+| `<Space>u`          | Custom Lua command                   | `vim/_editor.lua`              |
+| `<Space>pdf`        | Open PDF with evince                 | Custom Lua                     |
+| `<Space>el`         | Go error logging snippet             | Custom Lua                     |
+| `<Space>ef`         | Go error fatal snippet               | Custom Lua                     |
+| `<Space>ea`         | Go error assert snippet              | Custom Lua                     |
+| `<Space>ee`         | Go error return snippet              | Custom Lua                     |
+| `<Space>mir`        | Make it rain animation               | Custom Lua                     |
+| `<Space>gol`        | Game of life animation               | Custom Lua                     |
+| `<Space>vwm`        | Start vim-with-me                    | Custom Lua                     |
+
+---
+
+## Opencode AI Assistant
+
+| Key                 | Action                               | Notes                          |
+| ------------------- | ------------------------------------ | ------------------------------ |
+| `<leader>oca`       | Ask opencode                         | AI assistant                   |
+| `<leader>ocx`       | Execute opencode action              | AI assistant                   |
+| `<leader>ocp`       | Add to opencode                      | AI assistant                   |
+| `<leader>oct`       | Toggle opencode                      | AI assistant                   |
+| `<leader>ocu`       | Opencode half page up                | AI assistant                   |
+| `<leader>ocd`       | Opencode half page down              | AI assistant                   |
 
 ---
 
@@ -172,6 +198,14 @@
 
 * `<Space>lg`: Open LazyGit
 
+### Opencode AI Assistant
+
+* `<leader>oca`: Ask opencode
+* `<leader>ocx`: Execute opencode action
+* `<leader>ocp`: Add to opencode
+* `<leader>oct`: Toggle opencode
+* `<leader>ocu>/<leader>ocd>`: Opencode page navigation
+
 ---
 
 ## Terminal & System Commands
@@ -183,5 +217,11 @@
 | `<C-Bslash>` | Toggle between terminal and file buffer |
 | `<Space>pdf` | Open PDF in Evince                      |
 | `<Space>x`   | Make file executable                    |
+| `<leader>oca` | Ask opencode AI assistant               |
+| `<leader>ocx` | Execute opencode action                 |
+| `<leader>ocp` | Add to opencode                         |
+| `<leader>oct` | Toggle opencode                         |
+| `<leader>ocu` | Opencode half page up                   |
+| `<leader>ocd` | Opencode half page down                 |
 
 ---
