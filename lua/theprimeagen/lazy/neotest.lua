@@ -7,12 +7,22 @@ return {
         "nvim-treesitter/nvim-treesitter",
         "fredrikaverpil/neotest-golang",
         "leoluz/nvim-dap-go",
+        "nvim-neotest/neotest-python",
+        "mfussenegger/nvim-dap-python",
     },
     config = function()
+        require("dap-python").setup("python")
         require("neotest").setup({
             adapters = {
                 require("neotest-golang")({
                     dap = { justMyCode = false },
+                }),
+
+                require("neotest-python")({
+                    dap = { justMyCode = false },
+                    runner = "pytest",
+                    python = "python", -- or absolute venv path
+                    pytest_discover_instances = true,
                 }),
             },
         })
